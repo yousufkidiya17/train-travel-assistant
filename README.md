@@ -1,92 +1,55 @@
-<div align="center">
-
 # ðŸš‚ Train Travel Assistant
 
-### _AI-Powered Indian Railway Companion_
+<div align="center">
 
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Flask](https://img.shields.io/badge/Flask-2.0-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
-[![AI Powered](https://img.shields.io/badge/AI-Powered-FF6F61?style=for-the-badge&logo=openai&logoColor=white)](#)
-[![Indian Railways](https://img.shields.io/badge/Indian_Railways-IRCTC-FF5722?style=for-the-badge)](#)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.30+-red.svg)](https://streamlit.io/)
+[![Playwright](https://img.shields.io/badge/Playwright-1.40+-yellow.svg)](https://playwright.dev/)
+[![Status](https://img.shields.io/badge/Status-Active-success.svg)](#)
+[![Platform](https://img.shields.io/badge/Platform-Web-brightgreen.svg)](#)
+[![Last Updated](https://img.shields.io/badge/Last_Updated-March_2026-orange.svg)](#)
 
-<br/>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:16213e,100:0f3460&height=120&section=header" width="100%"/>
-
-**Train Travel Assistant** is an intelligent chatbot that helps you check **seat availability**, **PNR status**, **live train tracking**, and **fare comparison** for Indian Railways â€” all through a natural conversation interface.
-
-[ðŸ“– **How It Works**](#-how-it-works) Â· [ðŸš€ **Quick Start**](#-quick-start) Â· [ðŸ› **Report Bug**](https://github.com/yousufkidiya17/train-travel-assistant/issues)
+*A powerful train availability checker with AI-powered chat interface for Indian Railways*
 
 </div>
 
 ---
 
-## ðŸŽ¯ Overview
+## ðŸ“‹ Table of Contents
 
-> _"Your personal railway assistant â€” just ask in plain English or Hindi."_
-
-Train Travel Assistant combines **real-time web scraping** from Indian Railways with an **AI-powered chat interface** to give you instant answers about trains, seats, fares, and schedules. No more navigating complex IRCTC forms â€” just chat and get answers.
-
-<div align="center">
-
-| ðŸŽ« Seat Availability | ðŸ“ PNR Status | ðŸ—ºï¸ Live Tracking |
-|:---:|:---:|:---:|
-| Check seats across all classes | Track booking status in real-time | Know exactly where your train is |
-
-| ðŸ’° Fare Comparison | ðŸ“… Schedule Lookup | ðŸ¤– AI Chat |
-|:---:|:---:|:---:|
-| Compare fares across train types | Full route & timing details | Natural language queries |
-
-</div>
+- [Features](#features)
+- [Quick Start](#quick-start)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Tech Stack](#tech-stack)
+- [API Reference](#api-reference)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ---
 
 ## âœ¨ Features
 
-### ðŸ¤– Intelligent Chat Interface
-- **Natural language understanding** â€” ask in English or Hindi
-- AI-powered **intent detection** for railway queries
-- **Context-aware** follow-up conversations
-- Smart **fallback** with helpful suggestions
+### Core Features
 
-### ðŸ” Real-Time Data Scraping
-- Live data from **Indian Railways** official sources
-- **Seat availability** across all classes (1A, 2A, 3A, SL, 2S)
-- **PNR status** tracking with prediction
-- **Route & schedule** information
+| Feature | Description |
+|---------|-------------|
+| ðŸš‚ **Train Search** | Search trains between any two stations in India |
+| ðŸ“… **Date Selection** | Check availability up to 120 days in advance |
+| ðŸŽ« **Seat Availability** | Real-time seat availability status (CNF, WL, Regret) |
+| ðŸ’º **Class Information** | View availability for all coach classes (SL, CC, 3E, 3A, 2A, 1A) |
+| ðŸ’° **Price Display** | View fare information for each class |
+| ðŸ“± **Responsive UI** | Beautiful, mobile-friendly interface |
 
-### ðŸŽ¨ Clean UI Design
-- Responsive chat interface
-- Train-themed dark aesthetic
-- Mobile-first design approach
-- Quick-action buttons for common queries
+### Advanced Features
 
----
-
-## ðŸ—ï¸ Architecture
-
-```
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚               TRAIN TRAVEL ASSISTANT                    â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚   Frontend      â”‚          Backend                      â”‚
-â”‚                 â”‚                                       â”‚
-â”‚  Chat UI        â”‚    Flask + Python                     â”‚
-â”‚  HTML/CSS/JS    â”‚                                       â”‚
-â”‚                 â”‚    â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”                    â”‚
-â”‚                 â”‚    â”‚   AI Engine  â”‚ â† Query Parser     â”‚
-â”‚                 â”‚    â””â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”˜                    â”‚
-â”‚                 â”‚           â”‚                            â”‚
-â”‚                 â”‚    â”Œâ”€â”€â”€â”€â”€â”€â–¼â”€â”€â”€â”€â”€â”€â”€â”                    â”‚
-â”‚                 â”‚    â”‚  Scraper     â”‚ â† Live Railway Dataâ”‚
-â”‚                 â”‚    â””â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”˜                    â”‚
-â”‚                 â”‚           â”‚                            â”‚
-â”‚                 â”‚    â”Œâ”€â”€â”€â”€â”€â”€â–¼â”€â”€â”€â”€â”€â”€â”€â”                    â”‚
-â”‚                 â”‚    â”‚  Formatter   â”‚ â†’ Clean Response    â”‚
-â”‚                 â”‚    â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜                    â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-```
+- **AI Chat Interface** - Interact in Hinglish with AI agent
+- **Multiple Station Codes** - Support for all major Indian railway stations
+- **Popular Routes** - Quick access to commonly searched routes
+- **Real-time Scraping** - Live data from ConfirmTkt.com
 
 ---
 
@@ -94,8 +57,8 @@ Train Travel Assistant combines **real-time web scraping** from Indian Railways 
 
 ### Prerequisites
 
-- **Python** 3.10+
-- **pip** (Python package manager)
+- Python 3.11 or higher
+- pip or conda package manager
 
 ### Installation
 
@@ -104,19 +67,43 @@ Train Travel Assistant combines **real-time web scraping** from Indian Railways 
 git clone https://github.com/yousufkidiya17/train-travel-assistant.git
 cd train-travel-assistant
 
-# Create virtual environment
+# Create virtual environment (optional but recommended)
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
-
-# Run the application
-python app.py
 ```
 
-The app will be running at `http://localhost:5000` ðŸŽ‰
+### Run the Application
+
+```bash
+# Start the Streamlit app
+streamlit run app.py
+```
+
+The application will open in your default browser at `http://localhost:8501`
+
+---
+
+## ðŸ“– Usage
+
+### Using the Web Interface
+
+1. **Select Source Station** - Choose your departure station from the dropdown
+2. **Select Destination Station** - Choose your arrival station
+3. **Pick Travel Date** - Select your travel date (up to 120 days ahead)
+4. **Click Search** - Click the "Search Trains" button
+5. **View Results** - See all available trains with their availability status
+
+### Understanding Status Codes
+
+| Status | Meaning | Icon |
+|--------|---------|------|
+| **CNF** | Confirmed | âœ… |
+| **WL** | Waitlist | â³ |
+| **Regret** | No seats available | âŒ |
+| **Check** | Please check manually | âš ï¸ |
 
 ---
 
@@ -124,66 +111,136 @@ The app will be running at `http://localhost:5000` ðŸŽ‰
 
 ```
 train-travel-assistant/
-â”œâ”€â”€ app.py                 # Flask application & routes
-â”œâ”€â”€ scraper.py             # Railway data scraping engine
-â”œâ”€â”€ test_scraper.py        # Scraper test suite
+â”œâ”€â”€ app.py                  # Main Streamlit application
+â”œâ”€â”€ scraper.py              # Web scraping module
+â”œâ”€â”€ test_scraper.py        # Testing module
 â”œâ”€â”€ requirements.txt       # Python dependencies
-â”œâ”€â”€ THINKER.md             # Design notes & architecture
-â”œâ”€â”€ LICENSE                # MIT License
-â””â”€â”€ README.md
+â”œâ”€â”€ output.txt            # Sample output data
+â”œâ”€â”€ LICENSE               # MIT License
+â”œâ”€â”€ README.md            # This file
+â””â”€â”€ .gitignore           # Git ignore patterns
 ```
 
 ---
 
-## ðŸ› ï¸ Tech Stack
+## ðŸ›  Tech Stack
+
+### Backend
+
+| Technology | Purpose |
+|------------|---------|
+| **Python 3.11+** | Programming language |
+| **Playwright** | Web automation & scraping |
+| **asyncio** | Asynchronous operations |
+
+### Frontend
+
+| Technology | Purpose |
+|------------|---------|
+| **Streamlit** | Web UI framework |
+| **Pandas** | Data manipulation |
+| **CSS** | Custom styling |
+
+### Data Sources
+
+- **ConfirmTkt.com** - Indian railway booking platform
+
+---
+
+## ðŸ”§ API Reference
+
+### TrainScraper Class
+
+```python
+class TrainScraper:
+    async def search_trains_async(
+        self, 
+        from_station: str, 
+        to_station: str, 
+        date: str
+    ) -> dict
+```
+
+**Parameters:**
+- `from_station` (str): Source station code (e.g., "NDLS")
+- `to_station` (str): Destination station code (e.g., "BSB")
+- `date` (str): Travel date in DD-MM-YYYY format
+
+**Returns:**
+```python
+{
+    "source": str,
+    "destination": str,
+    "date": str,
+    "trains": [
+        {
+            "Train No": str,
+            "Train Name": str,
+            "Status": str
+        },
+        ...
+    ]
+}
+```
+
+---
+
+## ðŸ¤ Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## ðŸ“„ License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+```
+MIT License
+
+Copyright (c) 2026 Yousef Kidiya
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+## ðŸ™ Acknowledgments
+
+- [ConfirmTkt](https://www.confirmtkt.com) for the railway data
+- [Streamlit](https://streamlit.io) for the amazing UI framework
+- [Playwright](https://playwright.dev) for web automation
+- All contributors and supporters
+
+---
 
 <div align="center">
 
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| **Backend** | Python 3.10, Flask | Web server & API |
-| **AI** | LLM Integration | Natural language understanding |
-| **Scraping** | BeautifulSoup, Requests | Railway data extraction |
-| **Frontend** | HTML, CSS, JavaScript | Chat interface |
+**Made with â¤ï¸ by [Yousef Kidiya](https://github.com/yousufkidiya17)**
 
-</div>
-
----
-
-## ðŸ—ºï¸ Roadmap
-
-- [x] Core chat interface
-- [x] Seat availability scraping
-- [x] PNR status lookup
-- [x] AI-powered query parsing
-- [ ] Live train GPS tracking
-- [ ] Fare prediction with ML
-- [ ] Multi-language support (Hindi, Tamil, Telugu)
-- [ ] Telegram bot integration
-- [ ] Push notifications for PNR updates
-
----
-
-## ðŸ“œ License
-
-Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more information.
-
----
-
-## ðŸ‘¨â€ðŸ’» Author
-
-**Yousuf Kidiya**
-
-[![GitHub](https://img.shields.io/badge/GitHub-yousufkidiya17-181717?style=for-the-badge&logo=github)](https://github.com/yousufkidiya17)
-
----
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:16213e,100:0f3460&height=100&section=footer" width="100%"/>
-
-**Made with ðŸ¤ in India**
-
-_If you found this project useful, please consider giving it a â­!_
+![Stars](https://img.shields.io/github/stars/yousufkidiya17/train-travel-assistant?style=social)
+![Forks](https://img.shields.io/github/forks/yousufkidiya17/train-travel-assistant?style=social)
 
 </div>
